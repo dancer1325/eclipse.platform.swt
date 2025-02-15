@@ -1,16 +1,20 @@
 [![SWT Matrix Build](https://github.com/eclipse-platform/eclipse.platform.swt/actions/workflows/maven.yml/badge.svg)](https://github.com/eclipse-platform/eclipse.platform.swt/actions/workflows/maven.yml) ![SWT Matrix Tests](https://gist.githubusercontent.com/eclipse-releng-bot/78d110a601baa4ef777ccb472f584038/raw/71510599eb84e852f3e135aa7a3ddf33854ca716/badge.svg)
 
-# About
+* Eclipse SWT
+  * == cross-platform GUI library -- for -- JVM based desktop applications
+    * -> includes platform-specific ".jar"
+  * _Example:_ [Eclipse](https://www.eclipse.org)
+  * 👀ALMOST ENTIRELY developed -- by -- volunteers 👀
 
-SWT is a cross-platform GUI library for JVM based desktop applications.
-The best known SWT-based application is [Eclipse](https://www.eclipse.org).
+# Getting Started
 
-## Getting Started
+* steps
+  * download it [here](https://download.eclipse.org/eclipse/downloads/index.html)
+  * add the ".jar" | YOUR classpath
 
-SWT comes with platform-specific jar files.
-Download them from https://download.eclipse.org/eclipse/downloads/index.html and add the jar file to your classpath.
+* _Example:_
+  * TODO: How to create a NEW Eclipse project? 
 
-### Example
 ![Example](example.png)
 ```java
 import org.eclipse.swt.SWT;
@@ -76,65 +80,34 @@ Finally, we set the window's size determines by its child controls and open the 
 The `while`-loop processes all GUI related events until the shell is disposed which happens when closing.
 Before exiting, any claimed GUI resources needs to be freed.
 
-
 # Contributing to SWT
 
-Thanks for your interest in this project.
-
-For information about contributing to Eclipse Platform in general, see the general [CONTRIBUTING](https://github.com/eclipse-platform/.github/blob/main/CONTRIBUTING.md) page.
-
-[![Create Eclipse Development Environment for Eclipse SWT](https://download.eclipse.org/oomph/www/setups/svg/SWT.svg)](
-https://www.eclipse.org/setups/installer/?url=https://raw.githubusercontent.com/eclipse-platform/eclipse.platform.swt/master/bundles/org.eclipse.swt.tools/Oomph/PlatformSWTConfiguration.setup&show=true
-"Click to open Eclipse-Installer Auto Launch or drag into your running installer")
-
+* follow [Eclipse Platform's CONTRIBUTING](https://github.com/eclipse-platform/.github/blob/main/CONTRIBUTING.md)
+* steps
+  * create a Eclipse Development Environment -- [link](https://www.eclipse.org/setups/installer/?url=https://raw.githubusercontent.com/eclipse-platform/eclipse.platform.swt/master/bundles/org.eclipse.swt.tools/Oomph/PlatformSWTConfiguration.setup&show=true) --
+    * [.setup used](bundles/org.eclipse.swt.tools/Oomph/PlatformSWTConfiguration.setup)
 
 ## Developer Resources
 
-See the following description for how to contribute a feature or a bug fix to SWT.
-
-- <https://www.eclipse.org/swt/fixbugs.php>
-
-Information regarding source code management, builds, coding standards, and more and be found under the following link.
-
-- <https://projects.eclipse.org/projects/eclipse.platform.swt/developer>
-
-Also see in the SWT section of the Eclipse FAQ for more background information about SWT.
-
-- <https://github.com/eclipse-platform/eclipse.platform/blob/master/docs/FAQ/The_Official_Eclipse_FAQs.md#standard-widget-toolkit-swt>
-
-## Contributor License Agreement
-
-Before your contribution can be accepted by the project, you need to create and electronically sign the Eclipse Foundation Contributor License Agreement (CLA).
-
-- <http://www.eclipse.org/legal/CLA.php>
+* see [Eclipse FAQ](https://github.com/eclipse-platform/eclipse.platform/blob/master/docs/FAQ/The_Official_Eclipse_FAQs.md#standard-widget-toolkit-swt)
 
 ## Contact
 
-Contact the project developers via the project's "dev" list.
+* [project's "dev" list](https://accounts.eclipse.org/mailing-list/platform-dev)
 
-- <https://accounts.eclipse.org/mailing-list/platform-dev>
+## CURRENT Bugs
 
-## Search for Bugs
+* see [Bugzilla](https://bugs.eclipse.org/bugs/buglist.cgi?product=Platform&component=SWT)
 
-SWT used to track ongoing development and issues in Bugzilla .
+# Prototype | 1! Cross-Platform SWT Implementation
 
-- <https://bugs.eclipse.org/bugs/buglist.cgi?product=Platform&component=SWT>
-
-## Create a New Bug
-
-You can register bugs and feature requests in the Github Issue Tracker. Remember that contributions are always welcome!
-- [View existing SWT issues](https://github.com/eclipse-platform/eclipse.platform.swt/issues)
-- [New SWT issue](https://github.com/eclipse-platform/eclipse.platform.swt/issues/new)
-
-Please bear in mind that this project is almost entirely developed by volunteers. If you do not provide the implementation yourself (or pay someone to do it for you), the bug might never get fixed. If it is a serious bug, other people than you might care enough to provide a fix.
-
-
-# Prototyping on a Single, Cross-Platform SWT Implementation
-
-There is current work on evaluating the feasibility of achieving a single, OS-agnostic implementation of SWT in order to reduce maintenance efforts, enable better look and feel, and improve configurability.
-The work on these prototypes and their documentation can currently be found in a dedicated GitHub organization: https://github.com/swt-initiative31
-
-Actual prototyping work has been started on four technologies: Skia with Visual Class Library (VCL), Skia with custom-rendered widgets, GTK, and Swing\
-The prototypes for the following technologies are still under investigation, are further developed and can be tried out here:
-- Skia with custom-drawn widgets: https://github.com/swt-initiative31/prototype-skija
-- Cross-platform GTK: https://github.com/swt-initiative31/prototype-gtk
+* see [here](https://github.com/swt-initiative31)
+* Reasons: 🧠
+  * reduce maintenance efforts,
+  * enable better look and feel
+  * improve configurability 🧠
+* technologies suggested
+  * Skia with Visual Class Library (VCL), 
+  * [Skia + custom-rendered widgets](https://github.com/swt-initiative31/prototype-skija), 
+  * [GTK](https://github.com/swt-initiative31/prototype-gtk),
+  * Swing
